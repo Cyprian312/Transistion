@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Animacje CSS</title>
+
+<style>
+
+.box1{
+    width:200px;
+    height:200px;
+    background-color:rgb(255, 153, 0);
+    transition:2s;
+}
+
+.box1:hover{
+    background-color:rgb(4, 0, 255);
+    width:300px;
+}
+
+.container{
+    margin-top:50px;
+}
+
+.box{
+    width:120px;
+    height:120px;
+    background-color:rgb(98, 0, 128);
+    margin:10px;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:2s;
+}
+
+.linear:hover{
+    transform:translateX(200px);
+    transition-timing-function:linear;
+}
+
+.ease:hover{
+    transform:translateX(200px);
+    transition-timing-function:ease;
+}
+
+.easein:hover{
+    transform:translateX(200px);
+    transition-timing-function:ease-in;
+}
+
+.easeout:hover{
+    transform:translateX(200px);
+    transition-timing-function:ease-out;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Duży klocek</h2>
+<div class="box1"></div>
+
+
+<h2>Małe klocki</h2>
+
+<div class="container">
+    <div class="box linear">linear</div>
+    <div class="box ease">ease</div>
+    <div class="box easein">ease-in</div>
+    <div class="box easeout">ease-out</div>
+</div>
+
+</body>
+</html>
